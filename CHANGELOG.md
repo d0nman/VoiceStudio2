@@ -22,6 +22,7 @@ metadata and the backend fallback mirror it.
 ### Removed
 
 - Remote compute devices, remote workers and GPU sharing moved to VoiceStudio Pro and are no longer included in the open-source app.
+- Telemetry (opt-in analytics, its consent prompts, and the uninstall ping) and the workspace sponsor footer bar are removed.
 
 ## [0.5.7] — 2026-10-07
 

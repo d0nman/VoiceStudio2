@@ -12,7 +12,6 @@ import { scrubText } from '@shared/utils/scrub';
 import { ReportBug } from './report-bug';
 import { Button } from './ui/button';
 import { openRepairAgent } from '@/lib/repair-agent-events';
-import { captureException } from '@shared/utils/analytics';
 
 const MODULE_RETRY_PREFIX = 'voicestudio.moduleRetry:';
 const reloadRenderer = () => window.location.reload();
@@ -118,7 +117,6 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, { error: E
     return { error };
   }
   componentDidCatch(error: Error, info: ErrorInfo) {
-    captureException(error, 'renderer:react-boundary');
     console.error('[VoiceStudio UI]', error, info.componentStack);
   }
   render() {

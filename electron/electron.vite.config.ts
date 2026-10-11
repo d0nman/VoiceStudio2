@@ -20,11 +20,6 @@ const define = {
   __PRO_LIFETIME_VARIANT_ID__: JSON.stringify(
     process.env.VOICESTUDIO_PRO_LIFETIME_VARIANT_ID ?? '',
   ),
-  // Keep the renderer and its managed Python backend on one analytics project.
-  __POSTHOG_PROJECT_TOKEN__: JSON.stringify(
-    process.env.VITE_POSTHOG_KEY ?? process.env.POSTHOG_PROJECT_TOKEN ?? '',
-  ),
-  __POSTHOG_HOST__: JSON.stringify(process.env.VITE_POSTHOG_HOST ?? process.env.POSTHOG_HOST ?? ''),
 };
 
 // OMNIVOICE_UI_PORT is canonical (the backend reads it for its origin

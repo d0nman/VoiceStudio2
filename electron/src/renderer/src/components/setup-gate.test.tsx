@@ -33,11 +33,6 @@ vi.mock('@/features/settings/media-tools', () => ({
 vi.mock('@/features/settings/privacy-settings', () => ({
   PrivacySettings: () => <div>Privacy</div>,
 }));
-vi.mock('./analytics-consent', () => ({
-  AnalyticsConsent: ({ onRequirementChange }: { onRequirementChange(value: boolean): void }) => (
-    <button onClick={() => onRequirementChange(false)}>Choose privacy</button>
-  ),
-}));
 vi.mock('@/features/settings/shortcut-settings', () => ({
   ShortcutSettings: () => <div>Shortcuts</div>,
 }));
@@ -91,9 +86,7 @@ it('requires passing preflight and installed models before completion', async ()
     expect(screen.getByRole('button', { name: 'setup.continue_ok' })).toBeEnabled(),
   );
   fireEvent.click(screen.getByRole('button', { name: 'setup.continue_ok' }));
-  await screen.findByRole('button', { name: 'Choose privacy' });
-  expect(screen.getByText('Privacy')).toBeVisible();
-  fireEvent.click(screen.getByRole('button', { name: 'Choose privacy' }));
+  expect(await screen.findByText('Privacy')).toBeVisible();
   await waitFor(() =>
     expect(screen.getByRole('button', { name: 'setup.continue_ok' })).toBeEnabled(),
   );

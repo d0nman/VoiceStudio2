@@ -761,16 +761,6 @@
     "watermark_off_toast": "Yeni sesler için görünmez filigran devre dışı bırakıldı.",
     "watermark_failed": "Filigran ayarı değiştirilemedi."
   },
-  "consent": {
-    "title": "VoiceStudio'un gelişmesine yardım eder misiniz?",
-    "desc": "Hataları daha hızlı düzeltmemize yardımcı olan, anonim ve içerik barındırmayan kullanım istatistikleri — tamamen isteğe bağlı, varsayılan olarak kapalı.",
-    "step_label": "VoiceStudio'u geliştir",
-    "body": "Anonim, içerik barındırmayan kullanım istatistikleri: hangi motorların kullanıldığı, üretimlerin ne kadar sürdüğü ve hata türleri. Asla metniniz, sesiniz, dosyalarınız veya sizi tanımlayan hiçbir şey gönderilmez. Evet demedikçe hiçbir şey gönderilmez ve kararınızı istediğiniz zaman Ayarlar → Gizlilik'ten değiştirebilirsiniz.",
-    "learn_more": "Tam olarak ne gönderiliyor?",
-    "yes": "Evet, anonim istatistikleri paylaş",
-    "no": "Hayır, teşekkürler",
-    "dismiss": "Kapat (analitik kapalı kalır)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio {{language}} dilinde açıldı. İngilizceyi mi tercih edersiniz?",
     "switch": "İngilizceye geç",

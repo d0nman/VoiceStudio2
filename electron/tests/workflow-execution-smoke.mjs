@@ -72,32 +72,30 @@ await page.route(
         ? { models_ready: true, missing: [] }
         : path === '/health'
           ? { status: 'ok' }
-          : path === '/settings/analytics'
-            ? { available: false, prompted: true, opted_in: false }
-            : path === '/models/install/status'
-              ? { jobs: [] }
-              : path === '/engines'
-                ? {
-                    tts: {
-                      active: 'omnivoice',
-                      backends: [
-                        { id: 'omnivoice', available: ttsAvailable, supports_cloning: true },
-                      ],
-                    },
-                    asr: { backends: [] },
-                    llm: { backends: [] },
-                  }
-                : path === '/engines/translation'
-                  ? { engines: [], active: '' }
-                  : path === '/profiles'
-                    ? [{ id: 'demo-voice', name: 'Demo voice', kind: 'clone' }]
-                    : path === '/models'
-                      ? { models: [] }
-                      : path === '/model/loaded'
-                        ? { models: [], count: 0 }
-                        : path === '/history' || path === '/batch/jobs'
-                          ? []
-                          : undefined;
+          : path === '/models/install/status'
+            ? { jobs: [] }
+            : path === '/engines'
+              ? {
+                  tts: {
+                    active: 'omnivoice',
+                    backends: [
+                      { id: 'omnivoice', available: ttsAvailable, supports_cloning: true },
+                    ],
+                  },
+                  asr: { backends: [] },
+                  llm: { backends: [] },
+                }
+              : path === '/engines/translation'
+                ? { engines: [], active: '' }
+                : path === '/profiles'
+                  ? [{ id: 'demo-voice', name: 'Demo voice', kind: 'clone' }]
+                  : path === '/models'
+                    ? { models: [] }
+                    : path === '/model/loaded'
+                      ? { models: [], count: 0 }
+                      : path === '/history' || path === '/batch/jobs'
+                        ? []
+                        : undefined;
     return route.fulfill({
       status: json === undefined ? 404 : 200,
       json: json ?? { detail: 'Unavailable in fixture' },

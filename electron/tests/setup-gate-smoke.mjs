@@ -11,7 +11,6 @@ let models = false;
 let preflight = false;
 let partialPreflight = true;
 let installs = 0;
-const consentWrites = [];
 try {
   await page.route('**/api/api/settings/performance-profile', (route) =>
     route.fulfill({
@@ -58,12 +57,6 @@ try {
       },
     }),
   );
-  await page.route('**/api/settings/analytics', (route) => {
-    if (route.request().method() === 'PUT') consentWrites.push(route.request().postDataJSON());
-    return route.fulfill({
-      json: { available: true, prompted: consentWrites.length > 0, opted_in: false },
-    });
-  });
   await page.route('**/api/setup/status', (route) =>
     route.fulfill({
       json: {
@@ -133,12 +126,6 @@ try {
     await queryClient.invalidateQueries({ queryKey: ['setup-status'] });
   });
   await next.click();
-  const decline = page.getByRole('button', { name: 'No thanks', exact: true });
-  await decline.waitFor();
-  assert.equal(consentWrites.length, 0);
-  await decline.click();
-  await decline.waitFor({ state: 'hidden' });
-  assert.deepEqual(consentWrites, [{ enabled: false }]);
   await next.click();
   await page.getByRole('button', { name: 'Enter studio', exact: true }).click();
   await page

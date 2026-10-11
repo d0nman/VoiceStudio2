@@ -15,7 +15,6 @@ try {
   page.on('pageerror', (e) => errors.push(e.message));
   let provider = 'unknown';
   let watermark = { audioseal_available: true, invisible_enabled: true };
-  let analytics = { available: true, opted_in: false, enabled: false };
   let retention = { cap: 200, default: 200 };
   const writes = [];
   let reject = false;
@@ -25,21 +24,10 @@ try {
   await page.route('**/api/watermark/status', (route) => route.fulfill({ json: watermark }));
   await page.route('**/api/watermark/settings?*', (route) => {
     writes.push('watermark');
+    if (reject) return route.fulfill({ status: 500, json: { detail: 'Private diagnostic' } });
     watermark.invisible_enabled =
       new URL(route.request().url()).searchParams.get('invisible') === 'true';
     return route.fulfill({ json: watermark });
-  });
-  await page.route('**/api/api/settings/analytics', (route) => {
-    if (route.request().method() === 'PUT') {
-      writes.push('analytics');
-      if (reject) return route.fulfill({ status: 500, json: { detail: 'Private diagnostic' } });
-      analytics = {
-        ...analytics,
-        enabled: route.request().postDataJSON().enabled,
-        opted_in: route.request().postDataJSON().enabled,
-      };
-    }
-    return route.fulfill({ json: analytics });
   });
   await page.route('**/api/api/settings/history-retention', (route) => {
     if (route.request().method() === 'PUT') {
@@ -59,14 +47,12 @@ try {
   await mark.click();
   await mark.and(page.locator('[aria-checked="false"]')).waitFor();
   assert.equal(watermark.invisible_enabled, false);
-  const consent = page.getByRole('switch', { name: t('privacy.analytics_title'), exact: true });
-  await consent.click();
-  await consent.and(page.locator('[aria-checked="true"]')).waitFor();
-  assert.equal(analytics.opted_in, true);
   reject = true;
-  await consent.click();
+  await mark.click();
   await page.getByRole('alert').waitFor();
-  assert.equal(await consent.getAttribute('aria-checked'), 'true');
+  assert.equal(await mark.getAttribute('aria-checked'), 'false');
+  assert.equal(watermark.invisible_enabled, false);
+  reject = false;
   assert.equal(await page.getByText('Private diagnostic').count(), 0);
   const cap = page.getByRole('spinbutton', {
     name: t('settings.history_retention_cap'),
@@ -88,15 +74,13 @@ try {
   assert.equal(retention.cap, 0);
   provider = 'nllb';
   watermark.audioseal_available = false;
-  analytics.available = false;
   await page.reload();
   await page.getByText(t('privacy.translator_offline'), { exact: true }).waitFor();
   await mark.waitFor({ state: 'detached' });
-  await consent.waitFor({ state: 'detached' });
   assert.equal(await cap.inputValue(), '0');
   assert.deepEqual(errors, []);
   console.log(
-    'PASS: privacy status, explicit analytics consent, watermark settings, failed saves, retention confirmation and unlimited retention',
+    'PASS: privacy status, watermark settings, failed saves, retention confirmation and unlimited retention',
   );
 } finally {
   await browser.close();

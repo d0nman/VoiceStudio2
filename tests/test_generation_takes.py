@@ -406,7 +406,6 @@ def test_finalization_retains_current_take_when_stars_fill_cap(api, monkeypatch)
     _client, dbf, outdir, gen = api
     monkeypatch.setattr(gen, "_history_cap", lambda: 1)
     _insert_take(dbf, outdir, "favorite", 0, starred=1)
-    monkeypatch.setattr("core.analytics.capture", lambda *args: None)
     writing_threads = []
     writer = gen.save_generation_wav
     def record_writer(*args, **kwargs):

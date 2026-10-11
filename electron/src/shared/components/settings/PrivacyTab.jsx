@@ -12,7 +12,6 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Badge, Button } from '../../ui';
 import { useAppStore } from '../../store';
 import { SettingsSection } from './primitives';
-import AnalyticsOptIn from './AnalyticsOptIn';
 import WatermarkControl from './WatermarkControl';
 
 // Providers that send dialogue text to a third-party service vs. the ones that
@@ -113,15 +112,11 @@ export default function PrivacyTab({ info }) {
           </dd>
         </div>
       </dl>
-      {/* Opt-in product analytics. Renders nothing when the build ships no
-          destination, and is OFF until the user turns it on — so the
-          "no tracking" default above stays true for everyone who doesn't. */}
-      {/* The provenance mark. ON by default (the opposite of analytics
-          below), and now actually controllable — errors.a_watermark has told
-          users it lives here since watermarking shipped. */}
+      {/* The provenance mark. ON by default, and controllable —
+          errors.a_watermark has told users it lives here since watermarking
+          shipped. */}
       <div className="rounded-[var(--chrome-radius-pill)] bg-[var(--chrome-hover-bg)] px-[var(--space-4)] [&>[data-slot=setting-row]]:border-b [&>[data-slot=setting-row]]:border-[color-mix(in_srgb,var(--chrome-fg)_7%,transparent)] [&>[data-slot=setting-row]:last-of-type]:border-b-0">
         <WatermarkControl />
-        <AnalyticsOptIn />
       </div>
     </SettingsSection>
   );

@@ -761,16 +761,6 @@
     "watermark_off_toast": "Unsichtbares Wasserzeichen für neues Audio deaktiviert.",
     "watermark_failed": "Die Wasserzeichen-Einstellung konnte nicht geändert werden."
   },
-  "consent": {
-    "title": "VoiceStudio verbessern helfen?",
-    "desc": "Anonyme, inhaltsfreie Nutzungsstatistiken, die uns helfen, Fehler schneller zu beheben — völlig optional und standardmäßig deaktiviert.",
-    "step_label": "VoiceStudio verbessern",
-    "body": "Anonyme, inhaltsfreie Nutzungsstatistiken: welche Engines verwendet werden, wie lange Generierungen dauern und die Art von Fehlern. Niemals Ihr Text, Ihr Audio, Ihre Dateien oder etwas, das Sie identifiziert. Es wird nichts gesendet, solange Sie nicht zustimmen — und Sie können Ihre Entscheidung jederzeit unter Einstellungen → Datenschutz ändern.",
-    "learn_more": "Was genau wird gesendet?",
-    "yes": "Ja, anonyme Statistiken teilen",
-    "no": "Nein, danke",
-    "dismiss": "Schließen (Analytik bleibt aus)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio wurde auf {{language}} geöffnet. Lieber Englisch?",
     "switch": "Zu Englisch wechseln",

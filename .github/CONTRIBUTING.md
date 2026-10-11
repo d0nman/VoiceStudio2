@@ -374,8 +374,6 @@ hard rules from the first prompt.
   - **yt-dlp updates** from PyPI, only when the user clicks update
     (`backend/services/media_tools.py`).
   - Bug reports as prefilled GitHub Issue URLs opened in the user's browser.
-  - PostHog analytics only after a yes at the first-run consent prompt
-    (`backend/core/analytics.py`, allowlisted content-free metadata).
   - The GitHub star count (no credentials or referrer, refreshed every 20
     minutes while shown).
   - The Lemon Squeezy Pro licence check, only after the user enters a key

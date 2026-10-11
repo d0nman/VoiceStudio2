@@ -8,7 +8,6 @@ export async function startHealthBackend() {
     const fixtures = {
       '/health': { status: 'ok', version: 'native-smoke' },
       '/setup/status': { models_ready: true, missing: [] },
-      '/api/settings/analytics': { available: false, prompted: true, opted_in: false },
       '/engines': {},
       '/profiles': [],
       '/models': { models: [] },

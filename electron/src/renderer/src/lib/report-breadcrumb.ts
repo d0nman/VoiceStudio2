@@ -1,5 +1,4 @@
 import { addBreadcrumb } from '@shared/utils/breadcrumbs';
-import { capture, capturePageview } from '@shared/utils/analytics';
 
 const WORKSPACES = new Set([
   'home',
@@ -94,14 +93,11 @@ export function routeBreadcrumb(hash: string): string {
 export function recordRouteBreadcrumb(hash = window.location.hash): void {
   const action = routeBreadcrumb(hash);
   addBreadcrumb(action);
-  capture('screen_viewed', { stage: action });
-  capturePageview(action);
 }
 
 /** Record only closed-set action names; user text, paths and URLs are rejected. */
 export function recordActionBreadcrumb(action: ReportAction): void {
   if (reportActions.has(action)) {
     addBreadcrumb(action);
-    capture('workflow_action', { stage: action });
   }
 }

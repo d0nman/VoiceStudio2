@@ -1,10 +1,6 @@
 import { isBenignWindowError } from '@shared/utils/foreignErrors';
 import { scrubText } from '@shared/utils/scrub';
 import { openRepairAgent } from '@/lib/repair-agent-events';
-import {
-  captureException,
-  type AnalyticsExceptionStage,
-} from '@shared/utils/analytics';
 
 const THROTTLE_MS = 30_000;
 const lastOpened = new Map<string, number>();
@@ -31,14 +27,8 @@ function shouldRepair(message: string, error: unknown, filename = ''): boolean {
   return true;
 }
 
-function repair(
-  message: string,
-  error: unknown,
-  filename = '',
-  stage: AnalyticsExceptionStage = 'renderer:task',
-): void {
+function repair(message: string, error: unknown, filename = ''): void {
   if (!shouldRepair(message, error, filename)) return;
-  captureException(error, stage);
   const detail = error instanceof Error ? error.stack || error.message : String(error ?? message);
   openRepairAgent(
     scrubText(
@@ -57,10 +47,9 @@ function repair(
 export function runRendererTask(label: string, task: () => void | Promise<void>): void {
   try {
     const result = task();
-    if (result)
-      void Promise.resolve(result).catch((error) => repair(label, error, '', 'renderer:task'));
+    if (result) void Promise.resolve(result).catch((error) => repair(label, error, ''));
   } catch (error) {
-    repair(label, error, '', 'renderer:task');
+    repair(label, error, '');
   }
 }
 
@@ -78,20 +67,14 @@ export function installGlobalErrorRecovery(): void {
     // The fault is now captured in the frontend log and repair-agent report.
     // Mark it handled so Chromium does not add a second noisy "Uncaught" entry.
     event.preventDefault();
-    repair(message, event.error, event.filename, 'renderer:uncaught');
+    repair(message, event.error, event.filename);
   });
   window.addEventListener('unhandledrejection', (event) => {
     const reason = event.reason;
     const message = reason?.message || String(reason);
     if (isBenignWindowError(message, reason)) return;
     event.preventDefault();
-    repair(message, reason, '', 'renderer:rejection');
+    repair(message, reason, '');
   });
-  for (const fault of earlyFaults)
-    repair(
-      fault.message,
-      fault.error,
-      fault.filename,
-      fault.kind === 'rejection' ? 'renderer:rejection' : 'renderer:uncaught',
-    );
+  for (const fault of earlyFaults) repair(fault.message, fault.error, fault.filename);
 }

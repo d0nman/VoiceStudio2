@@ -761,16 +761,6 @@
     "watermark_off_toast": "已為新音訊停用不可見浮水印。",
     "watermark_failed": "無法變更浮水印設定。"
   },
-  "consent": {
-    "title": "協助改進 VoiceStudio？",
-    "desc": "匿名且不含內容的使用統計,能協助我們更快修正錯誤——完全可選,預設為關閉。",
-    "step_label": "改進 VoiceStudio",
-    "body": "匿名且不含內容的使用統計：使用了哪些引擎、生成花費多久，以及錯誤的類型。絕不會傳送你的文字、音訊、檔案或任何可識別你身分的資訊。除非你同意，否則不會傳送任何資料；你可以隨時在 設定 → 隱私 中變更選擇。",
-    "learn_more": "究竟會傳送什麼？",
-    "yes": "是，分享匿名統計",
-    "no": "不用了，謝謝",
-    "dismiss": "關閉（分析保持關閉）"
-  },
   "langPrompt": {
     "offer": "VoiceStudio 以{{language}}開啟。想改用英文嗎？",
     "switch": "切換到英文",

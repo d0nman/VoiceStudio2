@@ -186,11 +186,6 @@ gh api --method PATCH repos/debpalash/VoiceStudio --input - <<'JSON'
 JSON
 ```
 
-The PostHog project token committed in `backend/core/analytics.py` and
-`electron/src/shared/utils/analytics.ts` is a publishable write-only token by
-design (see `tests/test_no_committed_analytics_token.py`). If an alert flags it,
-close the alert as "used in tests" or "false positive". Do not remove the token.
-
 ## Private vulnerability reporting
 
 `.github/SECURITY.md` names GitHub Security Advisories as the preferred channel,

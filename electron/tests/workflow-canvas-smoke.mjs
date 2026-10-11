@@ -22,27 +22,25 @@ async function mockBackend(target) {
           ? { models_ready: true, missing: [] }
           : path === '/health'
             ? { status: 'ok' }
-            : path === '/settings/analytics'
-              ? { available: false, prompted: true, opted_in: false }
-              : path === '/models/install/status'
-                ? { jobs: [] }
-                : path === '/calls/readiness'
-                  ? { items: [] }
-                  : path === '/calls'
-                    ? { calls: [] }
-                    : path === '/profiles'
+            : path === '/models/install/status'
+              ? { jobs: [] }
+              : path === '/calls/readiness'
+                ? { items: [] }
+                : path === '/calls'
+                  ? { calls: [] }
+                  : path === '/profiles'
+                    ? []
+                    : path === '/history'
                       ? []
-                      : path === '/history'
-                        ? []
-                        : path === '/models'
-                          ? { models: [] }
-                          : path === '/model/loaded'
-                            ? { models: [], count: 0 }
-                            : path === '/batch/jobs'
-                              ? []
-                              : path === '/engines/translation'
-                                ? { engines: [], active: '' }
-                                : undefined;
+                      : path === '/models'
+                        ? { models: [] }
+                        : path === '/model/loaded'
+                          ? { models: [], count: 0 }
+                          : path === '/batch/jobs'
+                            ? []
+                            : path === '/engines/translation'
+                              ? { engines: [], active: '' }
+                              : undefined;
       return route.fulfill({
         status: json === undefined ? 404 : 200,
         json: json ?? { detail: 'Not available in workflow smoke fixture' },

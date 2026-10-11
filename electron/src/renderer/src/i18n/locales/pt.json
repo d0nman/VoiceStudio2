@@ -98,9 +98,7 @@
     "dub": "Traduza e duble áudio ou vídeo.",
     "stories": "Crie cenas com várias vozes.",
     "audiobook": "Crie audiolivros com capítulos.",
-    "transcribe": "Transforme gravações em texto.",
-    "collapseFooter": "Recolher rodapé",
-    "expandFooter": "Expandir rodapé"
+    "transcribe": "Transforme gravações em texto."
   },
   "twilioIntegration": {
     "exposureWarning": "Ativar isto abre uma porta local separada que seu túnel publica na internet. Apenas solicitações assinadas com seu Auth Token do Twilio são aceitas; o restante do VoiceStudio continua privado.",
@@ -1900,11 +1898,9 @@
   },
   "privacy": {
     "translator_online": "O tradutor está online: {{provider}}",
-    "analytics_title": "Ajude a melhorar o VoiceStudio",
     "translator_offline": "Tradutor off-line",
     "translator_unknown": "Desconhecido",
     "watermark_subtitle": "Ativada por predefinição. Marca o áudio gerado como criado por IA para poder ser identificado mais tarde. Afeta apenas o áudio gerado a partir de agora.",
-    "analytics_subtitle": "Desativado por padrão. Dados anônimos de mecanismo, idioma, duração, número de caracteres e tipos de erro. Nunca texto ou áudio.",
     "watermark_title": "Marca de água invisível"
   },
   "updates": {
@@ -2266,16 +2262,6 @@
     "check_arch_label": "Windows em ARM",
     "check_arch_detail": "PC com Windows ARM64: o backend de IA é executado como x64 na emulação do Windows, apenas na CPU (sem aceleração de GPU/NPU).",
     "check_arch_fix": "A geração de voz funciona, mas é mais lenta. Prefira um motor de voz leve (KittenTTS, Supertonic-3, PocketTTS) e um modelo Whisper pequeno."
-  },
-  "consent": {
-    "title": "Ajudar a melhorar o VoiceStudio?",
-    "desc": "Estatísticas de uso anônimas e sem conteúdo que nos ajudam a corrigir bugs mais rápido — totalmente opcionais, desativadas por padrão.",
-    "step_label": "Melhorar o VoiceStudio",
-    "body": "Estatísticas de uso anônimas e sem conteúdo: quais mecanismos são usados, quanto tempo as gerações levam e o tipo de erros. Nunca o seu texto, o seu áudio, os seus arquivos ou qualquer coisa que o identifique. Nada é enviado a menos que você aceite, e você pode mudar de ideia a qualquer momento em Configurações → Privacidade.",
-    "learn_more": "O que exatamente é enviado?",
-    "yes": "Sim, compartilhar estatísticas anônimas",
-    "no": "Não, obrigado",
-    "dismiss": "Dispensar (a análise continua desativada)"
   },
   "firstrun": {
     "stage_models": "Modelos e motores",
@@ -2867,37 +2853,6 @@
     "progress": "{{done}} / {{total}} segmentos validados",
     "cancelled": "Cancelado",
     "fitting": "Ajustando o tempo"
-  },
-  "sponsorSlot": {
-    "partner_heading": "Seja parceiro do VoiceStudio",
-    "partner_subtitle": "Apresente seu produto a quem cria com voz.",
-    "app_placement": "Destaque no app",
-    "integration_page": "Página de integração",
-    "readme_exposure": "Visibilidade no README",
-    "visibility": "Visibilidade",
-    "integration": "Integração do produto",
-    "installs": "Instalações diretas",
-    "distribution": "Distribuição para desenvolvedores",
-    "partner": "Parceiro verificado",
-    "privacy": "Privacidade",
-    "title": "Destaque-se no VoiceStudio",
-    "description": "Aumente a visibilidade da sua marca patrocinando um espaço em destaque pago.",
-    "form": "Formulário Google",
-    "email": "E-mail",
-    "book": "Reserve seu espaço",
-    "preview": "Prévia do patrocinador",
-    "footer_brand": "Seja um patrocinador",
-    "footer_promo": "Promova sua empresa",
-    "footer_downloads": "Downloads dos instaladores Electron",
-    "footer_views": "Visualizações do repositório GitHub (14 dias)",
-    "footer_stars": "Estrelas no GitHub",
-    "footer_stats_note": "Dados do GitHub verificados em 25 set 2026. Downloads desde v0.5.3; visualizações de 10 a 23 set.",
-    "footer_book": "Adicionar agora",
-    "email_template": "Olá, equipe VoiceStudio,\n\nGostaria de fazer uma parceria com a VoiceStudio e avaliar um espaço em destaque para minha marca.\n\nMarca / produto:\nSite:\nIntegração ou campanha:\nPúblico / prazo:\n\nPodem compartilhar os pacotes, preços, opções de posicionamento e requisitos técnicos disponíveis? Entendo que uma parceria em destaque pode incluir uma página de documentação, logo no README do GitHub, espaço no rodapé do app e presença no diretório Integrations.\n\nObrigado(a),\n[Nome]\n[Cargo / empresa]\n[Contato]",
-    "message": "Sua marca, site e mensagem",
-    "email_app": "Abrir app de e-mail",
-    "copy_email": "Copiar e-mail",
-    "preview_detail": "Seu logo, link e apresentação podem aparecer aqui."
   },
   "supportPlans": {
     "remove": "Remover barra de patrocinadores",

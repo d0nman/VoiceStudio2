@@ -1125,22 +1125,11 @@ async def lifespan(app: FastAPI):
     # (Now strictly earlier than before the early-bind refactor: it used to
     # run after the heavy imports, so a crash DURING them went unattributed.)
     from core import run_sentinel
-    _crash_record = None
     try:
-        _crash_record = run_sentinel.detect_unclean_shutdown()
+        run_sentinel.detect_unclean_shutdown()
         run_sentinel.write_sentinel()
     except Exception:
         logger.exception("Run-sentinel startup failed (non-fatal).")
-    # Opt-in lifecycle analytics (core/analytics.py): install/update/crash
-    # events. A no-op without the user's explicit consent AND a build token.
-    # The run-sentinel record above is the ONE authoritative crash source —
-    # the desktop shell's markers cover the same deaths, so the frontend
-    # never emits a crash event (no double-count).
-    try:
-        from core import analytics
-        analytics.record_startup_lifecycle(_crash_record)
-    except Exception:
-        logger.exception("Analytics startup lifecycle failed (non-fatal).")
 
     if _EAGER:
         # Pytest / opt-in embedders: today's exact behavior — everything done
