@@ -1,8 +1,7 @@
 # VoiceStudio Individual Contributor License Agreement 1.0
 
 Thank you for contributing to VoiceStudio. This Agreement records the rights
-you grant for your Contributions. It does not transfer your copyright: you keep
-ownership of your work and may use it for any other purpose.
+you grant for your Contributions. You keep ownership of your work and may use it for any other purpose.
 
 This text is fixed. A later version will have a new version number and file,
 and will need a new signature.
