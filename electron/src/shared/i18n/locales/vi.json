@@ -761,16 +761,6 @@
     "watermark_off_toast": "Đã tắt hình mờ vô hình cho âm thanh mới.",
     "watermark_failed": "Không thể thay đổi cài đặt hình mờ."
   },
-  "consent": {
-    "title": "Giúp cải thiện VoiceStudio?",
-    "desc": "Số liệu thống kê sử dụng ẩn danh, không chứa nội dung, giúp chúng tôi sửa lỗi nhanh hơn — hoàn toàn tùy chọn, mặc định tắt.",
-    "step_label": "Cải thiện VoiceStudio",
-    "body": "Thống kê sử dụng ẩn danh, không chứa nội dung: engine nào được dùng, thời gian tạo mất bao lâu và loại lỗi. Không bao giờ gửi văn bản, âm thanh, tệp của bạn hay bất cứ thứ gì nhận dạng bạn. Không có gì được gửi trừ khi bạn đồng ý, và bạn có thể đổi ý bất cứ lúc nào trong Cài đặt → Quyền riêng tư.",
-    "learn_more": "Chính xác thì những gì được gửi?",
-    "yes": "Có, chia sẻ thống kê ẩn danh",
-    "no": "Không, cảm ơn",
-    "dismiss": "Đóng (phân tích vẫn tắt)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio đã mở bằng {{language}}. Bạn muốn dùng tiếng Anh?",
     "switch": "Chuyển sang tiếng Anh",

@@ -98,9 +98,7 @@
     "dub": "Traduisez et doublez des fichiers audio ou vidéo.",
     "stories": "Créez des scènes avec plusieurs voix.",
     "audiobook": "Créez des livres audio avec des chapitres.",
-    "transcribe": "Transformez des enregistrements en texte.",
-    "collapseFooter": "Réduire le pied de page",
-    "expandFooter": "Développer le pied de page"
+    "transcribe": "Transformez des enregistrements en texte."
   },
   "twilioIntegration": {
     "exposureWarning": "L'activation ouvre un port local distinct que votre tunnel publie sur internet. Seules les requêtes signées avec votre Auth Token Twilio sont acceptées ; le reste de VoiceStudio reste privé.",
@@ -1900,11 +1898,9 @@
   },
   "privacy": {
     "translator_online": "Le traducteur est en ligne : {{provider}}",
-    "analytics_title": "Aider à améliorer VoiceStudio",
     "translator_offline": "Traducteur hors ligne",
     "translator_unknown": "Inconnu",
     "watermark_subtitle": "Activé par défaut. Marque l'audio généré comme créé par IA afin qu'il puisse être identifié plus tard. N'affecte que l'audio généré à partir de maintenant.",
-    "analytics_subtitle": "Désactivé par défaut. Données anonymes : moteur, langue, durée, nombre de caractères et types d’erreur. Jamais votre texte ou audio.",
     "watermark_title": "Filigrane invisible"
   },
   "updates": {
@@ -2266,16 +2262,6 @@
     "check_arch_label": "Windows sur ARM",
     "check_arch_detail": "PC Windows ARM64 : le backend IA s’exécute en x64 sous l’émulation Windows, sur CPU uniquement (sans accélération GPU/NPU).",
     "check_arch_fix": "La génération vocale fonctionne mais est plus lente. Privilégiez un moteur vocal léger (KittenTTS, Supertonic-3, PocketTTS) et un petit modèle Whisper."
-  },
-  "consent": {
-    "title": "Aider à améliorer VoiceStudio ?",
-    "desc": "Statistiques d'utilisation anonymes et sans contenu qui nous aident à corriger les bugs plus vite — entièrement facultatives, désactivées par défaut.",
-    "step_label": "Améliorer VoiceStudio",
-    "body": "Statistiques d'utilisation anonymes, sans contenu : quels moteurs sont utilisés, la durée des générations et le type d'erreurs. Jamais votre texte, votre audio, vos fichiers ni rien qui vous identifie. Rien n'est envoyé sans votre accord, et vous pouvez changer d'avis à tout moment dans Réglages → Confidentialité.",
-    "learn_more": "Qu'est-ce qui est envoyé exactement ?",
-    "yes": "Oui, partager des statistiques anonymes",
-    "no": "Non merci",
-    "dismiss": "Fermer (l'analyse reste désactivée)"
   },
   "firstrun": {
     "stage_models": "Modèles et moteurs",
@@ -2867,37 +2853,6 @@
     "progress": "{{done}} / {{total}} segments validés",
     "cancelled": "Annulé",
     "fitting": "Ajustement du minutage"
-  },
-  "sponsorSlot": {
-    "partner_heading": "Devenez partenaire de VoiceStudio",
-    "partner_subtitle": "Présentez votre produit aux créateurs qui utilisent la voix.",
-    "app_placement": "Présence dans l’application",
-    "integration_page": "Page d’intégration",
-    "readme_exposure": "Visibilité dans le README",
-    "visibility": "Visibilité",
-    "integration": "Intégration produit",
-    "installs": "Installations directes",
-    "distribution": "Distribution auprès des développeurs",
-    "partner": "Partenaire vérifié",
-    "privacy": "Confidentialité",
-    "title": "Soyez mis en avant sur VoiceStudio",
-    "description": "Donnez de la visibilité à votre marque en sponsorisant un emplacement vedette payant.",
-    "form": "Formulaire Google",
-    "email": "E-mail",
-    "book": "Réservez votre emplacement",
-    "preview": "Aperçu du sponsor",
-    "footer_brand": "Devenir sponsor",
-    "footer_promo": "Faites connaître votre entreprise",
-    "footer_downloads": "Téléchargements des installateurs Electron",
-    "footer_views": "Vues du dépôt GitHub (14 jours)",
-    "footer_stars": "Étoiles GitHub",
-    "footer_stats_note": "Données GitHub vérifiées le 25 sept. 2026. Téléchargements depuis v0.5.3 ; vues du 10 au 23 sept.",
-    "footer_book": "Ajouter maintenant",
-    "email_template": "Bonjour l’équipe VoiceStudio,\n\nJ’aimerais devenir partenaire de VoiceStudio et étudier une mise en avant pour ma marque.\n\nMarque / produit :\nSite web :\nIntégration ou campagne :\nAudience / calendrier :\n\nPourriez-vous partager les offres, tarifs, emplacements et exigences techniques disponibles ? Je comprends qu’un partenariat mis en avant peut inclure une page de documentation, un logo dans le README GitHub, un emplacement dans le pied de l’application et une présence dans le répertoire Integrations.\n\nMerci,\n[Nom]\n[Rôle / entreprise]\n[Contact]",
-    "message": "Votre marque, site web et message",
-    "email_app": "Ouvrir la messagerie",
-    "copy_email": "Copier l’adresse e-mail",
-    "preview_detail": "Votre logo, lien et présentation pourraient apparaître ici."
   },
   "supportPlans": {
     "remove": "Retirer la barre des sponsors",

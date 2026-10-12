@@ -43,7 +43,6 @@
     "src/shared/utils/backendHint.ts",
     "src/shared/utils/deploymentMode.ts",
     "src/shared/utils/errorDocsMap.ts",
-    "src/shared/utils/analytics.ts",
     "src/shared/api/external.ts",
     "src/shared/api/dialects.ts",
     "src/shared/repair-request.ts",

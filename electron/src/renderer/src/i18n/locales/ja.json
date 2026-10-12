@@ -98,9 +98,7 @@
     "dub": "音声や動画を翻訳・吹き替え。",
     "stories": "複数の声でシーンを作成。",
     "audiobook": "章立てのオーディオブックを作成。",
-    "transcribe": "録音を文字に起こす。",
-    "collapseFooter": "フッターを折りたたむ",
-    "expandFooter": "フッターを展開"
+    "transcribe": "録音を文字に起こす。"
   },
   "twilioIntegration": {
     "exposureWarning": "オンにすると、トンネルがインターネットに公開する別のローカルポートが開きます。Twilio Auth Token で署名されたリクエストのみ受け付け、VoiceStudio のその他の部分は非公開のままです。",
@@ -1898,11 +1896,9 @@
   },
   "privacy": {
     "translator_online": "翻訳者はオンラインです: {{provider}}",
-    "analytics_title": "VoiceStudio の改善に協力",
     "translator_offline": "オフライン翻訳者",
     "translator_unknown": "不明",
     "watermark_subtitle": "既定で有効。生成した音声を AI 生成として印付けし、後から識別できるようにします。今後生成する音声にのみ適用されます。",
-    "analytics_subtitle": "初期設定では無効です。エンジン、言語、所要時間、文字数、エラーの種類を匿名で送信します。テキストや音声は送信しません。",
     "watermark_title": "不可視の透かし"
   },
   "updates": {
@@ -2264,16 +2260,6 @@
     "check_arch_label": "ARM 版 Windows",
     "check_arch_detail": "ARM64 の Windows PC です。AI バックエンドは Windows のエミュレーション上で x64 として動作し、CPU のみを使用します（GPU/NPU による高速化はありません）。",
     "check_arch_fix": "音声生成は動作しますが、速度は遅くなります。軽量な音声エンジン（KittenTTS、Supertonic-3、PocketTTS）と小さな Whisper モデルをおすすめします。"
-  },
-  "consent": {
-    "title": "VoiceStudio の改善に協力しますか？",
-    "desc": "バグをより早く修正するのに役立つ、匿名でコンテンツを含まない利用統計 — 完全に任意で、デフォルトではオフです。",
-    "step_label": "VoiceStudio の改善",
-    "body": "匿名でコンテンツを含まない使用統計です。使用したエンジン、生成にかかった時間、エラーの種類のみを送信します。あなたのテキスト、音声、ファイル、あなたを特定できる情報は決して送信されません。同意しない限り何も送信されず、設定 → プライバシーでいつでも変更できます。",
-    "learn_more": "実際に送信される内容は？",
-    "yes": "はい、匿名統計を共有する",
-    "no": "いいえ",
-    "dismiss": "閉じる（アナリティクスはオフのまま）"
   },
   "firstrun": {
     "stage_models": "モデルとエンジン",
@@ -2865,37 +2851,6 @@
     "progress": "{{done}} / {{total}} セグメントを検証済み",
     "cancelled": "キャンセル済み",
     "fitting": "タイミングを調整中"
-  },
-  "sponsorSlot": {
-    "partner_heading": "VoiceStudio のパートナーに",
-    "partner_subtitle": "音声で新しいものを作る人に製品を届けましょう。",
-    "app_placement": "アプリ内掲載",
-    "integration_page": "連携ページ",
-    "readme_exposure": "README 掲載",
-    "visibility": "認知度",
-    "integration": "製品連携",
-    "installs": "直接インストール",
-    "distribution": "開発者向け配信",
-    "partner": "認証済みパートナー",
-    "privacy": "プライバシー",
-    "title": "VoiceStudioで注目を集める",
-    "description": "有料の注目枠をスポンサーして、ブランドの認知度を高めましょう。",
-    "form": "Googleフォーム",
-    "email": "メール",
-    "book": "掲載枠を申し込む",
-    "preview": "スポンサーの表示例",
-    "footer_brand": "スポンサーになる",
-    "footer_promo": "ビジネスを宣伝",
-    "footer_downloads": "Electron インストーラーのダウンロード数",
-    "footer_views": "GitHub リポジトリの閲覧数（14日間）",
-    "footer_stars": "GitHub スター数",
-    "footer_stats_note": "2026年9月25日時点の GitHub データ。ダウンロードは v0.5.3 以降、閲覧数は9月10～23日。",
-    "footer_book": "今すぐ追加",
-    "email_template": "VoiceStudioチームの皆さま、\n\nVoiceStudioとのパートナーシップと、ブランドの注目掲載について相談したくご連絡しました。\n\nブランド / 製品：\nウェブサイト：\n連携またはキャンペーン：\n対象ユーザー / 時期：\n\n利用可能なプラン、料金、掲載場所、技術要件を教えていただけますか？注目パートナーには、ドキュメントページ、GitHub READMEのロゴ、アプリフッター枠、Integrationsディレクトリ掲載が含まれると理解しています。\n\nよろしくお願いします。\n[名前]\n[役職 / 会社]\n[連絡先]",
-    "message": "ブランド名・ウェブサイト・メッセージ",
-    "email_app": "メールアプリを開く",
-    "copy_email": "メールアドレスをコピー",
-    "preview_detail": "ここにロゴ、リンク、紹介文を掲載できます。"
   },
   "supportPlans": {
     "remove": "スポンサー欄を非表示にする",

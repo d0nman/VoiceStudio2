@@ -98,9 +98,7 @@
     "dub": "Übersetze und synchronisiere Audio oder Video.",
     "stories": "Erstelle Szenen mit mehreren Stimmen.",
     "audiobook": "Erstelle Hörbücher mit Kapiteln.",
-    "transcribe": "Wandle Aufnahmen in Text um.",
-    "collapseFooter": "Fußleiste einklappen",
-    "expandFooter": "Fußleiste ausklappen"
+    "transcribe": "Wandle Aufnahmen in Text um."
   },
   "twilioIntegration": {
     "exposureWarning": "Beim Einschalten wird ein separater lokaler Port geöffnet, den dein Tunnel im Internet veröffentlicht. Nur mit deinem Twilio Auth Token signierte Anfragen werden akzeptiert; der Rest von VoiceStudio bleibt privat.",
@@ -1898,11 +1896,9 @@
   },
   "privacy": {
     "translator_online": "Übersetzer ist online: {{provider}}",
-    "analytics_title": "VoiceStudio verbessern",
     "translator_offline": "Offline-Übersetzer",
     "translator_unknown": "Unbekannt",
     "watermark_subtitle": "Standardmäßig aktiv. Kennzeichnet erzeugtes Audio als KI-generiert, damit es später erkannt werden kann. Gilt nur für ab jetzt erzeugtes Audio.",
-    "analytics_subtitle": "Standardmäßig aus. Anonyme Daten zu Engine, Sprache, Dauer, Zeichenanzahl und Fehlertypen. Kein Text oder Audio.",
     "watermark_title": "Unsichtbares Wasserzeichen"
   },
   "updates": {
@@ -2264,16 +2260,6 @@
     "check_arch_label": "Windows auf ARM",
     "check_arch_detail": "ARM64-Windows-PC – das KI-Backend läuft als x64 unter der Windows-Emulation, nur auf der CPU (keine GPU-/NPU-Beschleunigung).",
     "check_arch_fix": "Die Sprachgenerierung funktioniert, ist aber langsamer. Bevorzugen Sie eine leichtgewichtige Sprach-Engine (KittenTTS, Supertonic-3, PocketTTS) und ein kleines Whisper-Modell."
-  },
-  "consent": {
-    "title": "VoiceStudio verbessern helfen?",
-    "desc": "Anonyme, inhaltsfreie Nutzungsstatistiken, die uns helfen, Fehler schneller zu beheben — völlig optional und standardmäßig deaktiviert.",
-    "step_label": "VoiceStudio verbessern",
-    "body": "Anonyme, inhaltsfreie Nutzungsstatistiken: welche Engines verwendet werden, wie lange Generierungen dauern und die Art von Fehlern. Niemals Ihr Text, Ihr Audio, Ihre Dateien oder etwas, das Sie identifiziert. Es wird nichts gesendet, solange Sie nicht zustimmen — und Sie können Ihre Entscheidung jederzeit unter Einstellungen → Datenschutz ändern.",
-    "learn_more": "Was genau wird gesendet?",
-    "yes": "Ja, anonyme Statistiken teilen",
-    "no": "Nein, danke",
-    "dismiss": "Schließen (Analytik bleibt aus)"
   },
   "firstrun": {
     "stage_models": "Modelle & Engines",
@@ -2865,37 +2851,6 @@
     "progress": "{{done}} / {{total}} Segmente geprüft",
     "cancelled": "Abgebrochen",
     "fitting": "Timing anpassen"
-  },
-  "sponsorSlot": {
-    "partner_heading": "Partner von VoiceStudio werden",
-    "partner_subtitle": "Erreiche Menschen, die mit Sprache entwickeln.",
-    "app_placement": "Platzierung in der App",
-    "integration_page": "Integrationsseite",
-    "readme_exposure": "Präsenz in der README",
-    "visibility": "Sichtbarkeit",
-    "integration": "Produktintegration",
-    "installs": "Direkte Installationen",
-    "distribution": "Vertrieb für Entwickler",
-    "partner": "Verifizierter Partner",
-    "privacy": "Datenschutz",
-    "title": "Auf VoiceStudio vorgestellt werden",
-    "description": "Steigern Sie die Sichtbarkeit Ihrer Marke mit einem bezahlten hervorgehobenen Platz.",
-    "form": "Google-Formular",
-    "email": "E-Mail",
-    "book": "Platz anfragen",
-    "preview": "Sponsor-Vorschau",
-    "footer_brand": "Sponsor werden",
-    "footer_promo": "Werben Sie für Ihr Unternehmen",
-    "footer_downloads": "Electron-Installer-Downloads",
-    "footer_views": "GitHub-Repositoryaufrufe (14 Tage)",
-    "footer_stars": "GitHub-Sterne",
-    "footer_stats_note": "GitHub-Daten vom 25. Sept. 2026. Downloads seit v0.5.3; Aufrufe vom 10.–23. Sept.",
-    "footer_book": "Jetzt hinzufügen",
-    "email_template": "Hallo VoiceStudio-Team,\n\nich möchte mit VoiceStudio zusammenarbeiten und eine hervorgehobene Platzierung für meine Marke prüfen.\n\nMarke / Produkt:\nWebsite:\nIntegration oder Kampagne:\nZielgruppe / Zeitpunkt:\n\nKönnt ihr verfügbare Pakete, Preise, Platzierungsoptionen und technische Anforderungen teilen? Ich verstehe, dass eine Partnerschaft eine Dokumentationsseite, ein GitHub-README-Logo, einen Platz in der App-Fußzeile und einen Eintrag unter Integrations umfassen kann.\n\nDanke,\n[Name]\n[Rolle / Unternehmen]\n[Kontakt]",
-    "message": "Deine Marke, Website und Nachricht",
-    "email_app": "E-Mail-App öffnen",
-    "copy_email": "E-Mail-Adresse kopieren",
-    "preview_detail": "Hier könnten dein Logo, Link und eine Vorstellung stehen."
   },
   "supportPlans": {
     "remove": "Sponsorenleiste entfernen",

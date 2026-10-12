@@ -761,16 +761,6 @@
     "watermark_off_toast": "Tanda air tak terlihat dimatikan untuk audio baru.",
     "watermark_failed": "Tidak dapat mengubah pengaturan tanda air."
   },
-  "consent": {
-    "title": "Bantu meningkatkan VoiceStudio?",
-    "desc": "Statistik penggunaan anonim dan bebas konten yang membantu kami memperbaiki bug lebih cepat — sepenuhnya opsional, nonaktif secara default.",
-    "step_label": "Tingkatkan VoiceStudio",
-    "body": "Statistik penggunaan anonim tanpa konten: mesin mana yang digunakan, berapa lama proses pembuatan, dan jenis kesalahan. Tidak pernah teks Anda, audio Anda, file Anda, atau apa pun yang mengidentifikasi Anda. Tidak ada yang dikirim kecuali Anda setuju, dan Anda dapat berubah pikiran kapan saja di Pengaturan → Privasi.",
-    "learn_more": "Apa saja yang sebenarnya dikirim?",
-    "yes": "Ya, bagikan statistik anonim",
-    "no": "Tidak, terima kasih",
-    "dismiss": "Tutup (analitik tetap mati)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio terbuka dalam {{language}}. Lebih suka bahasa Inggris?",
     "switch": "Beralih ke bahasa Inggris",

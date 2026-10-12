@@ -9,10 +9,6 @@
  * environment escape either, and the only way off was hand-editing prefs.json.
  * A shipped instruction that cannot be followed is worse than no instruction.
  *
- * Deliberately mirrors AnalyticsOptIn's shape but inverts its default: analytics
- * is OFF until you opt in, provenance marking is ON until you opt out. Both are
- * honest about which way they point rather than hiding behind a policy page.
- *
  * When AudioSeal is unavailable on this install the toggle is not offered — an
  * inert switch claiming to control a mark that cannot be embedded would be the
  * same lie in the other direction.

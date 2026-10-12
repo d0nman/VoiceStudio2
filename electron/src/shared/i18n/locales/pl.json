@@ -761,16 +761,6 @@
     "watermark_off_toast": "Niewidoczny znak wodny wyłączony dla nowego dźwięku.",
     "watermark_failed": "Nie udało się zmienić ustawienia znaku wodnego."
   },
-  "consent": {
-    "title": "Pomóc ulepszyć VoiceStudio?",
-    "desc": "Anonimowe statystyki użytkowania bez treści, które pomagają nam szybciej naprawiać błędy — całkowicie opcjonalne, domyślnie wyłączone.",
-    "step_label": "Ulepsz VoiceStudio",
-    "body": "Anonimowe statystyki użycia bez treści: które silniki są używane, jak długo trwa generowanie i jaki jest typ błędów. Nigdy Twój tekst, dźwięk, pliki ani nic, co Cię identyfikuje. Nic nie jest wysyłane, dopóki nie wyrazisz zgody, a decyzję możesz zmienić w każdej chwili w Ustawienia → Prywatność.",
-    "learn_more": "Co dokładnie jest wysyłane?",
-    "yes": "Tak, udostępniaj anonimowe statystyki",
-    "no": "Nie, dziękuję",
-    "dismiss": "Zamknij (analityka pozostaje wyłączona)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio otworzył się w języku {{language}}. Wolisz angielski?",
     "switch": "Przełącz na angielski",

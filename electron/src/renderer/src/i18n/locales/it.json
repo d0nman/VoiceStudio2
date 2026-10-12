@@ -98,9 +98,7 @@
     "dub": "Traduci e doppia audio o video.",
     "stories": "Crea scene con più voci.",
     "audiobook": "Crea audiolibri con capitoli.",
-    "transcribe": "Trasforma le registrazioni in testo.",
-    "collapseFooter": "Comprimi piè di pagina",
-    "expandFooter": "Espandi piè di pagina"
+    "transcribe": "Trasforma le registrazioni in testo."
   },
   "twilioIntegration": {
     "exposureWarning": "Attivandolo si apre una porta locale separata che il tuo tunnel pubblica su internet. Sono accettate solo richieste firmate con il tuo Auth Token Twilio; il resto di VoiceStudio resta privato.",
@@ -1900,11 +1898,9 @@
   },
   "privacy": {
     "translator_online": "Il traduttore è online: {{provider}}",
-    "analytics_title": "Aiuta a migliorare VoiceStudio",
     "translator_offline": "Traduttore offline",
     "translator_unknown": "Sconosciuto",
     "watermark_subtitle": "Attiva per impostazione predefinita. Contrassegna l'audio generato come creato dall'IA per poterlo identificare in seguito. Riguarda solo l'audio generato da ora in poi.",
-    "analytics_subtitle": "Disattivato per impostazione predefinita. Dati anonimi su motore, lingua, durata, numero di caratteri e tipi di errore. Mai testo o audio.",
     "watermark_title": "Filigrana invisibile"
   },
   "updates": {
@@ -2266,16 +2262,6 @@
     "check_arch_label": "Windows su ARM",
     "check_arch_detail": "PC Windows ARM64: il backend IA viene eseguito come x64 con l’emulazione di Windows, solo su CPU (nessuna accelerazione GPU/NPU).",
     "check_arch_fix": "La generazione vocale funziona ma è più lenta. Preferisci un motore vocale leggero (KittenTTS, Supertonic-3, PocketTTS) e un modello Whisper piccolo."
-  },
-  "consent": {
-    "title": "Aiutare a migliorare VoiceStudio?",
-    "desc": "Statistiche di utilizzo anonime e prive di contenuti che ci aiutano a correggere i bug più velocemente — del tutto facoltative, disattivate per impostazione predefinita.",
-    "step_label": "Migliora VoiceStudio",
-    "body": "Statistiche d'uso anonime e prive di contenuti: quali motori vengono usati, quanto durano le generazioni e il tipo di errori. Mai il tuo testo, il tuo audio, i tuoi file o qualcosa che ti identifichi. Non viene inviato nulla senza il tuo consenso, e puoi cambiare idea in qualsiasi momento in Impostazioni → Privacy.",
-    "learn_more": "Cosa viene inviato esattamente?",
-    "yes": "Sì, condividi statistiche anonime",
-    "no": "No, grazie",
-    "dismiss": "Chiudi (l'analisi resta disattivata)"
   },
   "firstrun": {
     "stage_models": "Modelli e motori",
@@ -2867,37 +2853,6 @@
     "progress": "{{done}} / {{total}} segmenti convalidati",
     "cancelled": "Annullato",
     "fitting": "Regolazione dei tempi"
-  },
-  "sponsorSlot": {
-    "partner_heading": "Diventa partner di VoiceStudio",
-    "partner_subtitle": "Presenta il tuo prodotto a chi crea con la voce.",
-    "app_placement": "Visibilità nell’app",
-    "integration_page": "Pagina integrazione",
-    "readme_exposure": "Visibilità nel README",
-    "visibility": "Visibilità",
-    "integration": "Integrazione del prodotto",
-    "installs": "Installazioni dirette",
-    "distribution": "Distribuzione per sviluppatori",
-    "partner": "Partner verificato",
-    "privacy": "Privacy",
-    "title": "In evidenza su VoiceStudio",
-    "description": "Aumenta la visibilità del tuo brand sponsorizzando uno spazio in evidenza a pagamento.",
-    "form": "Modulo Google",
-    "email": "Email",
-    "book": "Prenota il tuo spazio",
-    "preview": "Anteprima sponsor",
-    "footer_brand": "Diventa sponsor",
-    "footer_promo": "Promuovi la tua attività",
-    "footer_downloads": "Download degli installer Electron",
-    "footer_views": "Visualizzazioni del repository GitHub (14 giorni)",
-    "footer_stars": "Stelle GitHub",
-    "footer_stats_note": "Dati GitHub verificati il 25 set 2026. Download dalla v0.5.3; visualizzazioni dal 10 al 23 set.",
-    "footer_book": "Aggiungi ora",
-    "email_template": "Ciao team VoiceStudio,\n\nVorrei collaborare con VoiceStudio e valutare una presenza in evidenza per il mio brand.\n\nBrand / prodotto:\nSito web:\nIntegrazione o campagna:\nPubblico / tempistiche:\n\nPotete condividere pacchetti, prezzi, opzioni di visibilità e requisiti tecnici? Ho capito che una partnership in evidenza può includere una pagina docs, un logo nel README GitHub, uno spazio nel footer dell’app e una presenza nella directory Integrations.\n\nGrazie,\n[Nome]\n[Ruolo / azienda]\n[Contatto]",
-    "message": "Il tuo marchio, sito e messaggio",
-    "email_app": "Apri l’app email",
-    "copy_email": "Copia email",
-    "preview_detail": "Qui potrebbero apparire il tuo logo, link e presentazione."
   },
   "supportPlans": {
     "remove": "Rimuovi barra sponsor",

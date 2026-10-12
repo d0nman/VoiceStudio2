@@ -10,7 +10,7 @@ import { apiJson } from '@/lib/api/client';
 import { SettingsSection, SettingsRow } from './settings-layout';
 import { useSettingsAction } from './use-settings-action';
 import { translatorPrivacy } from '@shared/utils/translatorPrivacy';
-export function PrivacySettings({ showAnalytics = true }: { showAnalytics?: boolean } = {}) {
+export function PrivacySettings() {
   const { t } = useTranslation();
   const info = useQuery({
     queryKey: ['system-info'],
@@ -35,53 +35,45 @@ export function PrivacySettings({ showAnalytics = true }: { showAnalytics?: bool
             {t('settings.translation')}
           </Link>
         </SettingsRow>
-        <PrivacyToggle kind="watermark" />
-        {showAnalytics && <PrivacyToggle kind="analytics" />}
+        <WatermarkToggle />
       </SettingsSection>
       <HistoryRetention />
     </>
   );
 }
-interface PrivacyState {
+interface WatermarkState {
   audioseal_available?: boolean;
   invisible_enabled?: boolean;
-  available?: boolean;
-  opted_in?: boolean;
-  enabled?: boolean;
 }
-function PrivacyToggle({ kind }: { kind: 'watermark' | 'analytics' }) {
+function WatermarkToggle() {
   const { t } = useTranslation();
   const client = useQueryClient();
   const action = useSettingsAction();
-  const watermark = kind === 'watermark';
-  const key = ['privacy', kind];
-  const path = watermark ? '/watermark/status' : '/api/settings/analytics';
+  const key = ['privacy', 'watermark'];
   const query = useQuery({
     queryKey: key,
-    queryFn: ({ signal }) => apiJson<PrivacyState>(path, { signal }),
+    queryFn: ({ signal }) => apiJson<WatermarkState>('/watermark/status', { signal }),
   });
   const state = query.data;
-  if (state && !(watermark ? state.audioseal_available : state.available)) return null;
+  if (state && !state.audioseal_available) return null;
   return (
     <div>
       <SettingsRow
-        id={'privacy-' + kind}
-        title={t('privacy.' + kind + '_title')}
-        description={t('privacy.' + kind + '_subtitle')}
+        id="privacy-watermark"
+        title={t('privacy.watermark_title')}
+        description={t('privacy.watermark_subtitle')}
       >
         <Switch
-          aria-label={t('privacy.' + kind + '_title')}
-          checked={!!(watermark ? state?.invisible_enabled : state?.opted_in)}
+          aria-label={t('privacy.watermark_title')}
+          checked={!!state?.invisible_enabled}
           disabled={!state || action.busy}
           onCheckedChange={(enabled) =>
             void action.run(async () => {
-              const next = await apiJson<PrivacyState>(
-                watermark ? '/watermark/settings?invisible=' + enabled : path,
-                watermark
-                  ? { method: 'POST' }
-                  : { method: 'PUT', body: JSON.stringify({ enabled }) },
+              const next = await apiJson<WatermarkState>(
+                '/watermark/settings?invisible=' + enabled,
+                { method: 'POST' },
               );
-              client.setQueryData(key, (prior: PrivacyState | undefined) => ({
+              client.setQueryData(key, (prior: WatermarkState | undefined) => ({
                 ...prior,
                 ...next,
               }));

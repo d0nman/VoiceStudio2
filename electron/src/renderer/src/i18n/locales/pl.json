@@ -98,9 +98,7 @@
     "dub": "Tłumacz i dubbinguj dźwięk lub wideo.",
     "stories": "Twórz sceny z wieloma głosami.",
     "audiobook": "Twórz audiobooki z rozdziałami.",
-    "transcribe": "Zamieniaj nagrania na tekst.",
-    "collapseFooter": "Zwiń stopkę",
-    "expandFooter": "Rozwiń stopkę"
+    "transcribe": "Zamieniaj nagrania na tekst."
   },
   "twilioIntegration": {
     "exposureWarning": "Włączenie otwiera osobny port lokalny, który Twój tunel publikuje w internecie. Akceptowane są tylko żądania podpisane Twoim Auth Token Twilio; reszta VoiceStudio pozostaje prywatna.",
@@ -1902,11 +1900,9 @@
   },
   "privacy": {
     "translator_online": "Tłumacz jest online: {{provider}}",
-    "analytics_title": "Pomóż ulepszyć VoiceStudio",
     "translator_offline": "Tłumacz offline",
     "translator_unknown": "Nieznany",
     "watermark_subtitle": "Domyślnie włączony. Oznacza wygenerowany dźwięk jako utworzony przez AI, aby można go było później rozpoznać. Dotyczy tylko dźwięku wygenerowanego od teraz.",
-    "analytics_subtitle": "Domyślnie wyłączone. Anonimowe dane o silniku, języku, czasie, liczbie znaków i typach błędów. Nigdy tekst ani dźwięk.",
     "watermark_title": "Niewidoczny znak wodny"
   },
   "updates": {
@@ -2268,16 +2264,6 @@
     "check_arch_label": "Windows na ARM",
     "check_arch_detail": "Komputer z Windows ARM64 — backend AI działa jako x64 w emulacji Windows, wyłącznie na CPU (bez przyspieszenia GPU/NPU).",
     "check_arch_fix": "Generowanie mowy działa, ale wolniej. Wybierz lekki silnik głosu (KittenTTS, Supertonic-3, PocketTTS) i mały model Whisper."
-  },
-  "consent": {
-    "title": "Pomóc ulepszyć VoiceStudio?",
-    "desc": "Anonimowe statystyki użytkowania bez treści, które pomagają nam szybciej naprawiać błędy — całkowicie opcjonalne, domyślnie wyłączone.",
-    "step_label": "Ulepsz VoiceStudio",
-    "body": "Anonimowe statystyki użycia bez treści: które silniki są używane, jak długo trwa generowanie i jaki jest typ błędów. Nigdy Twój tekst, dźwięk, pliki ani nic, co Cię identyfikuje. Nic nie jest wysyłane, dopóki nie wyrazisz zgody, a decyzję możesz zmienić w każdej chwili w Ustawienia → Prywatność.",
-    "learn_more": "Co dokładnie jest wysyłane?",
-    "yes": "Tak, udostępniaj anonimowe statystyki",
-    "no": "Nie, dziękuję",
-    "dismiss": "Zamknij (analityka pozostaje wyłączona)"
   },
   "firstrun": {
     "stage_models": "Modele i silniki",
@@ -2869,37 +2855,6 @@
     "progress": "Zweryfikowano {{done}} / {{total}} segmentów",
     "cancelled": "Anulowano",
     "fitting": "Dostosowywanie czasu"
-  },
-  "sponsorSlot": {
-    "partner_heading": "Zostań partnerem VoiceStudio",
-    "partner_subtitle": "Przedstaw produkt osobom tworzącym z użyciem głosu.",
-    "app_placement": "Obecność w aplikacji",
-    "integration_page": "Strona integracji",
-    "readme_exposure": "Obecność w README",
-    "visibility": "Widoczność",
-    "integration": "Integracja produktu",
-    "installs": "Instalacje bezpośrednie",
-    "distribution": "Dystrybucja dla deweloperów",
-    "partner": "Zweryfikowany partner",
-    "privacy": "Prywatność",
-    "title": "Wyróżnij się w VoiceStudio",
-    "description": "Zwiększ widoczność swojej marki, sponsorując płatne wyróżnione miejsce.",
-    "form": "Formularz Google",
-    "email": "E-mail",
-    "book": "Zarezerwuj miejsce",
-    "preview": "Podgląd sponsora",
-    "footer_brand": "Zostań sponsorem",
-    "footer_promo": "Promuj swoją firmę",
-    "footer_downloads": "Pobrania instalatorów Electron",
-    "footer_views": "Wyświetlenia repozytorium GitHub (14 dni)",
-    "footer_stars": "Gwiazdki GitHub",
-    "footer_stats_note": "Dane GitHub sprawdzono 25 wrz 2026. Pobrania od v0.5.3; wyświetlenia z 10–23 wrz.",
-    "footer_book": "Dodaj teraz",
-    "email_template": "Cześć, zespole VoiceStudio,\n\nChcę nawiązać współpracę z VoiceStudio i poznać możliwości wyróżnienia mojej marki.\n\nMarka / produkt:\nStrona internetowa:\nIntegracja lub kampania:\nOdbiorcy / termin:\n\nCzy możecie przesłać dostępne pakiety, ceny, opcje ekspozycji i wymagania techniczne? Rozumiem, że wyróżnione partnerstwo może obejmować stronę dokumentacji, logo w GitHub README, miejsce w stopce aplikacji i wpis w katalogu Integrations.\n\nDziękuję,\n[Imię]\n[Rola / firma]\n[Kontakt]",
-    "message": "Twoja marka, strona i wiadomość",
-    "email_app": "Otwórz pocztę",
-    "copy_email": "Kopiuj e-mail",
-    "preview_detail": "Tutaj mogą pojawić się Twoje logo, link i opis."
   },
   "supportPlans": {
     "remove": "Usuń pasek sponsorów",

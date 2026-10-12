@@ -1,5 +1,4 @@
 import { ModelLibrary, PerformanceModelPacks } from '@/features/settings/model-library';
-import { AnalyticsConsent } from './analytics-consent';
 import { SetupRecovery } from './setup-recovery';
 import { useEffect, useState, type ReactNode } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -51,7 +50,6 @@ export function SetupGate({ children }: { children: ReactNode }) {
   const advanced = step === 3 ? dictationSetup : setupAdvanced;
   const setAdvanced = step === 3 ? setDictationSetup : setSetupAdvanced;
   const [family, setFamily] = useState<ModelFamily>('tts');
-  const [consentRequired, setConsentRequired] = useState(true);
   const [enteringStudio, setEnteringStudio] = useState(false);
   const status = useQuery({
     queryKey: ['setup-status'],
@@ -92,13 +90,7 @@ export function SetupGate({ children }: { children: ReactNode }) {
     );
   const canContinue =
     !enteringStudio &&
-    (step === 0
-      ? preflight.data?.ok
-      : step === 1
-        ? status.data?.models_ready
-        : step === 2
-          ? !consentRequired
-          : true);
+    (step === 0 ? preflight.data?.ok : step === 1 ? status.data?.models_ready : true);
   return (
     <div className="flex h-full min-h-0 min-w-0 flex-1 flex-col">
       <header
@@ -200,12 +192,7 @@ export function SetupGate({ children }: { children: ReactNode }) {
                   preflight.isError ||
                   preflight.data?.ok === false ||
                   status.isError) && <SetupRecovery />}
-              {step === 2 && (
-                <>
-                  <AnalyticsConsent onRequirementChange={setConsentRequired} />
-                  <PrivacySettings showAnalytics={false} />
-                </>
-              )}
+              {step === 2 && <PrivacySettings />}
               {step === 3 && (
                 <div className="space-y-6">
                   <p className="text-sm leading-relaxed text-muted-foreground">

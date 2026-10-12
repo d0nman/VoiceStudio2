@@ -98,9 +98,7 @@
     "dub": "Ses veya videoyu çevirip dublaj yapın.",
     "stories": "Birden fazla sesle sahneler oluşturun.",
     "audiobook": "Bölümlü sesli kitaplar oluşturun.",
-    "transcribe": "Kayıtları metne dönüştürün.",
-    "collapseFooter": "Alt çubuğu daralt",
-    "expandFooter": "Alt çubuğu genişlet"
+    "transcribe": "Kayıtları metne dönüştürün."
   },
   "twilioIntegration": {
     "exposureWarning": "Bunu açmak, tünelinizin internette yayımladığı ayrı bir yerel bağlantı noktası açar. Yalnızca Twilio Auth Token'ınızla imzalanan istekler kabul edilir; VoiceStudio'nun geri kalanı gizli kalır.",
@@ -1898,11 +1896,9 @@
   },
   "privacy": {
     "translator_online": "Çevirmen çevrimiçi: {{provider}}",
-    "analytics_title": "VoiceStudio’nun gelişimine katkıda bulun",
     "translator_offline": "Çevrimdışı çevirmen",
     "translator_unknown": "Bilinmiyor",
     "watermark_subtitle": "Varsayılan olarak açık. Üretilen sesi, sonradan tanınabilmesi için yapay zekâ üretimi olarak işaretler. Yalnızca bundan sonra üretilen sesi etkiler.",
-    "analytics_subtitle": "Varsayılan olarak kapalıdır. Motor, dil, süre, karakter sayısı ve hata türlerine ilişkin anonim veriler. Metniniz veya sesiniz asla gönderilmez.",
     "watermark_title": "Görünmez filigran"
   },
   "updates": {
@@ -2264,16 +2260,6 @@
     "check_arch_label": "ARM üzerinde Windows",
     "check_arch_detail": "ARM64 Windows bilgisayar — yapay zekâ arka ucu Windows emülasyonu altında x64 olarak ve yalnızca CPU ile çalışır (GPU/NPU hızlandırması yok).",
     "check_arch_fix": "Ses üretimi çalışır ancak daha yavaştır. Hafif bir ses motoru (KittenTTS, Supertonic-3, PocketTTS) ve küçük bir Whisper modeli tercih edin."
-  },
-  "consent": {
-    "title": "VoiceStudio'un gelişmesine yardım eder misiniz?",
-    "desc": "Hataları daha hızlı düzeltmemize yardımcı olan, anonim ve içerik barındırmayan kullanım istatistikleri — tamamen isteğe bağlı, varsayılan olarak kapalı.",
-    "step_label": "VoiceStudio'u geliştir",
-    "body": "Anonim, içerik barındırmayan kullanım istatistikleri: hangi motorların kullanıldığı, üretimlerin ne kadar sürdüğü ve hata türleri. Asla metniniz, sesiniz, dosyalarınız veya sizi tanımlayan hiçbir şey gönderilmez. Evet demedikçe hiçbir şey gönderilmez ve kararınızı istediğiniz zaman Ayarlar → Gizlilik'ten değiştirebilirsiniz.",
-    "learn_more": "Tam olarak ne gönderiliyor?",
-    "yes": "Evet, anonim istatistikleri paylaş",
-    "no": "Hayır, teşekkürler",
-    "dismiss": "Kapat (analitik kapalı kalır)"
   },
   "firstrun": {
     "stage_models": "Modeller ve motorlar",
@@ -2865,37 +2851,6 @@
     "progress": "{{done}} / {{total}} bölüm doğrulandı",
     "cancelled": "İptal edildi",
     "fitting": "Zamanlama ayarlanıyor"
-  },
-  "sponsorSlot": {
-    "partner_heading": "VoiceStudio ile ortak olun",
-    "partner_subtitle": "Ürününüzü sesle çalışan geliştiricilere tanıtın.",
-    "app_placement": "Uygulama içi yerleşim",
-    "integration_page": "Entegrasyon sayfası",
-    "readme_exposure": "README görünürlüğü",
-    "visibility": "Görünürlük",
-    "integration": "Ürün entegrasyonu",
-    "installs": "Doğrudan kurulumlar",
-    "distribution": "Geliştirici dağıtımı",
-    "partner": "Doğrulanmış iş ortağı",
-    "privacy": "Gizlilik",
-    "title": "VoiceStudio'da öne çıkın",
-    "description": "Ücretli bir öne çıkan alanı sponsorlayarak markanızın görünürlüğünü artırın.",
-    "form": "Google Formu",
-    "email": "E-posta",
-    "book": "Yerinizi ayırtın",
-    "preview": "Sponsor önizlemesi",
-    "footer_brand": "Sponsor olun",
-    "footer_promo": "İşletmenizi tanıtın",
-    "footer_downloads": "Electron yükleyici indirmeleri",
-    "footer_views": "GitHub depo görüntülemeleri (14 gün)",
-    "footer_stars": "GitHub yıldızları",
-    "footer_stats_note": "GitHub verileri 25 Eyl 2026 tarihinde kontrol edildi. İndirmeler v0.5.3’ten beri; görüntülemeler 10–23 Eyl.",
-    "footer_book": "Şimdi ekle",
-    "email_template": "Merhaba VoiceStudio ekibi,\n\nVoiceStudio ile ortaklık kurmak ve markam için öne çıkan bir yerleşimi değerlendirmek istiyorum.\n\nMarka / ürün:\nWeb sitesi:\nEntegrasyon veya kampanya:\nHedef kitle / zamanlama:\n\nMevcut paketleri, fiyatları, yerleşim seçeneklerini ve teknik gereksinimleri paylaşabilir misiniz? Öne çıkan ortaklığın bir dokümantasyon sayfası, GitHub README logosu, uygulama altbilgisi alanı ve Integrations dizininde yer alabileceğini anlıyorum.\n\nTeşekkürler,\n[Ad]\n[Rol / şirket]\n[İletişim]",
-    "message": "Markanız, web siteniz ve mesajınız",
-    "email_app": "E-posta uygulamasını aç",
-    "copy_email": "E-postayı kopyala",
-    "preview_detail": "Logonuz, bağlantınız ve tanıtımınız burada görünebilir."
   },
   "supportPlans": {
     "remove": "Sponsor çubuğunu kaldır",

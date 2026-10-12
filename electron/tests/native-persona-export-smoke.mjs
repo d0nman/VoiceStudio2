@@ -71,14 +71,6 @@ try {
     window.location.reload();
   });
   await page.getByRole('heading', { name: 'Saved voices', exact: true }).waitFor();
-  const declineAnalytics = page.getByRole('button', { name: 'No thanks', exact: true });
-  if (
-    await declineAnalytics
-      .waitFor({ state: 'visible', timeout: 3000 })
-      .then(() => true)
-      .catch(() => false)
-  )
-    await declineAnalytics.click();
   const row = page
     .locator('li.py-3')
     .filter({ has: page.getByRole('button', { name, exact: true }) });

@@ -761,16 +761,6 @@
     "watermark_off_toast": "Filigrana invisibile disattivata per i nuovi audio.",
     "watermark_failed": "Non è stato possibile modificare l'impostazione della filigrana."
   },
-  "consent": {
-    "title": "Aiutare a migliorare VoiceStudio?",
-    "desc": "Statistiche di utilizzo anonime e prive di contenuti che ci aiutano a correggere i bug più velocemente — del tutto facoltative, disattivate per impostazione predefinita.",
-    "step_label": "Migliora VoiceStudio",
-    "body": "Statistiche d'uso anonime e prive di contenuti: quali motori vengono usati, quanto durano le generazioni e il tipo di errori. Mai il tuo testo, il tuo audio, i tuoi file o qualcosa che ti identifichi. Non viene inviato nulla senza il tuo consenso, e puoi cambiare idea in qualsiasi momento in Impostazioni → Privacy.",
-    "learn_more": "Cosa viene inviato esattamente?",
-    "yes": "Sì, condividi statistiche anonime",
-    "no": "No, grazie",
-    "dismiss": "Chiudi (l'analisi resta disattivata)"
-  },
   "langPrompt": {
     "offer": "VoiceStudio si è aperto in {{language}}. Preferisci l'inglese?",
     "switch": "Passa all'inglese",

@@ -939,28 +939,11 @@
     "translator_unknown": "未知",
     "change_translator": "更改翻译器",
     "no_tracking": "无 — 不追踪",
-    "analytics_title": "帮助改进 VoiceStudio",
-    "analytics_subtitle": "默认关闭。匿名使用统计——绝不涉及你的内容。",
-    "analytics_sends": "会发送：你使用的引擎和语言、一次生成耗时多久、字符数（数字，而非文本内容），以及错误类型。",
-    "analytics_never": "绝不会发送：你输入的文字、你的音频、你的文件名、你的语音名称，或任何可识别你身份的内容。不包括你的姓名、邮箱和 IP。",
-    "analytics_off_anytime": "你可以随时再次关闭，此后不会再发送任何内容。",
-    "analytics_on": "感谢——匿名使用统计已开启。",
-    "analytics_off": "分析已关闭。不会发送任何内容。",
     "watermark_title": "不可见水印",
     "watermark_subtitle": "默认开启。将生成的音频标记为 AI 制作，以便日后识别。仅影响从现在起生成的音频。",
     "watermark_on_toast": "已为新音频启用不可见水印。",
     "watermark_off_toast": "已为新音频停用不可见水印。",
     "watermark_failed": "无法更改水印设置。"
-  },
-  "consent": {
-    "title": "帮助改进 VoiceStudio？",
-    "desc": "匿名且不含内容的使用统计,可帮助我们更快修复问题——完全可选,默认关闭。",
-    "step_label": "改进 VoiceStudio",
-    "body": "匿名且不含内容的使用统计：使用了哪些引擎、生成耗时多久，以及错误的类型。绝不会发送你的文本、音频、文件或任何可识别你身份的信息。除非你同意，否则不会发送任何数据；你可以随时在 设置 → 隐私 中更改选择。",
-    "learn_more": "究竟会发送什么？",
-    "yes": "是，分享匿名统计",
-    "no": "不用了，谢谢",
-    "dismiss": "关闭（保持分析关闭）"
   },
   "langPrompt": {
     "offer": "VoiceStudio 以{{language}}打开。更想用英语吗？",

@@ -181,7 +181,6 @@ const extraSettings = [
     Component: PrivacySettings,
     fields: [
       'settings.privacy',
-      'privacy.analytics_title',
       'privacy.watermark_title',
       'settings.history_retention',
     ],

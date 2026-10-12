@@ -26,7 +26,6 @@ DELETE /pronunciation/{entry_id}
 GET /.well-known/voicestudio-speech
 GET /api/integrations/twilio/state
 GET /api/mcp/bindings
-GET /api/settings/analytics
 GET /api/settings/asr-openai-compat
 GET /api/settings/changelog
 GET /api/settings/compute-device
@@ -307,7 +306,6 @@ POST /watermark/detect
 POST /watermark/settings
 PUT /api/integrations/twilio/config
 PUT /api/mcp/bindings
-PUT /api/settings/analytics
 PUT /api/settings/asr-openai-compat
 PUT /api/settings/compute-device
 PUT /api/settings/cuda-device
