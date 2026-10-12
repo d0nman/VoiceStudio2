@@ -32,7 +32,7 @@ env:
 jobs:
   validate:
     # The archived sunset tag was assembled separately; future tags are Electron-only.
-    if: github.event_name == 'workflow_dispatch' || github.ref_name != vars.TAURI_SUNSET_TAG
+    if: github.event_name == 'workflow_dispatch' || github.ref_name != (vars.TAURI_SUNSET_TAG || 'v0.5.3')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -225,7 +225,8 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       TAG: ${{ inputs.release_tag || github.ref_name }}
-      SUNSET_TAG: ${{ vars.TAURI_SUNSET_TAG }}
+      SUNSET_TAG: ${{ vars.TAURI_SUNSET_TAG || 'v0.5.3' }}
+      SUNSET_REPOSITORY: debpalash/VoiceStudio
       PUBLISH: ${{ inputs.publish }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -244,8 +245,8 @@ jobs:
           test "$SUNSET_TAG" = "v0.5.3" || { echo "TAURI_SUNSET_TAG must be v0.5.3 before releasing"; exit 1; }
           # Every release carries copies pointing to immutable v0.5.3 payloads
           # so archived Tauri clients never receive Electron installers.
-          gh release download "$SUNSET_TAG" --pattern latest.json --dir release-assets
-          gh release download "$SUNSET_TAG" --pattern latest-user.json --dir release-assets
+          gh release download "$SUNSET_TAG" --repo "$SUNSET_REPOSITORY" --pattern latest.json --dir release-assets
+          gh release download "$SUNSET_TAG" --repo "$SUNSET_REPOSITORY" --pattern latest-user.json --dir release-assets
           python3 scripts/prepare_electron_release.py --assets release-assets --tag "$TAG" --sunset-tag "$SUNSET_TAG"
       - name: Disclose explicitly accepted unsigned artifacts
         if: inputs.allow_unsigned == true

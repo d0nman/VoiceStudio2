@@ -17,15 +17,21 @@ def test_release_downloads_legacy_feeds_only_from_final_tauri_tag(tmp_path, tag,
         executable = tmp_path / name
         executable.write_text("#!/bin/sh\n" + body + "\n")
         executable.chmod(0o755)
-    env = dict(os.environ, SUNSET_TAG=tag, TAG="v0.5.4", CAPTURE_PATH=str(capture))
+    env = dict(
+        os.environ,
+        SUNSET_TAG=tag,
+        SUNSET_REPOSITORY="debpalash/VoiceStudio",
+        TAG="v0.5.4",
+        CAPTURE_PATH=str(capture),
+    )
     env["PATH"] = str(tmp_path) + os.pathsep + env["PATH"]
     result = subprocess.run(["bash", "-e", "-c", step["run"]], env=env, capture_output=True)
     assert (result.returncode == 0) == allowed
     assert capture.exists() == allowed
     if allowed:
         assert capture.read_text().splitlines() == [
-            "release download v0.5.3 --pattern latest.json --dir release-assets",
-            "release download v0.5.3 --pattern latest-user.json --dir release-assets",
+            "release download v0.5.3 --repo debpalash/VoiceStudio --pattern latest.json --dir release-assets",
+            "release download v0.5.3 --repo debpalash/VoiceStudio --pattern latest-user.json --dir release-assets",
         ]
 
 def test_release_preserves_authored_announcement_and_contributors(monkeypatch, tmp_path):

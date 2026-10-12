@@ -18,8 +18,10 @@ Electron publication uses these GitHub Actions secrets:
 
 The archived `TAURI_SIGNING_PRIVATE_KEY*` secrets are retained only so the final
 Tauri release can be audited. The Tauri release workflow has been removed; every
-new version ships through `electron-release.yml`. `TAURI_SUNSET_TAG` must continue to identify v0.5.3 so Electron releases
-can copy the final signed `latest.json` and `latest-user.json` feeds unchanged.
+new version ships through `electron-release.yml`. The workflow defaults the Tauri
+sunset tag to v0.5.3 (the `TAURI_SUNSET_TAG` variable may explicitly preserve
+that value) and copies the final signed `latest.json` and `latest-user.json`
+feeds unchanged from the authoritative `debpalash/VoiceStudio` release.
 Those feeds must always point to immutable v0.5.3 Tauri assets; old Tauri clients
 must never receive an Electron installer.
 
